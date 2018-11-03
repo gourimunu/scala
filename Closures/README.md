@@ -3,3 +3,5 @@ You want to pass a Scala function around like a variable, and while doing so, yo
 
 Solution : 
 A closure is a function, whose return value depends on the value of one or more variables declared outside this function.
+
+https://alvinalexander.com/scala/how-to-use-closures-in-scala-fp-examples
