@@ -6,18 +6,19 @@ class Foo {
         f(name)
     }
 }
+object closure{
+    def main(args: Array[String]): Unit = {
 
-def main(args: Array[String]): Unit = {
+        var hello = "Hello"
+        def sayHello(name: String) { println(s"$hello, $name") }
 
-    var hello = "Hello"
-    def sayHello(name: String) { println(s"$hello, $name") }
+        // execute sayHello from the exec method foo
+        val foo = new Foo
+        foo.exec(sayHello, "Al")
 
-    // execute sayHello from the exec method foo
-    val foo = new Foo
-    foo.exec(sayHello, "Al")
-
-    // change the local variable 'hello', then execute sayHello from
-    // the exec method of foo, and see what happens
-    hello = "Hola"
-    foo.exec(sayHello, "Lorenzo")
+        // change the local variable 'hello', then execute sayHello from
+        // the exec method of foo, and see what happens
+        hello = "Hola"
+        foo.exec(sayHello, "Lorenzo")
+    }
 }
