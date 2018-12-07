@@ -1,3 +1,4 @@
+
 //Multiple parameter
 object currying
 {
